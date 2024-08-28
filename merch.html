@@ -1,0 +1,76 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gld: Merch</title>
+    <link rel="stylesheet" href="merch.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header class="header1">
+        <div class="logo">
+            <a href="./home.html">
+            <img src="./merch/Screenshot 2024-08-23 at 18.51.38.png" class="log">
+            </a>
+        </div>
+        <div class="nav">
+            <nav>
+                <ul class="uly">
+                    <li class="hov"><a href="./game.html">Gaming</a></li>
+                    <li class="hov"><a href="">Sports</a></li>
+                    <li class="hov"><a href="">News(In Progress)</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <hr style="border: 2px solid rgb(255, 255, 255);">
+    <header class="header2">
+        <div class="logo">
+            <img src="./merch/Screenshot 2024-08-23 at 18.50.18.png" class="log0">
+        </div>
+        <div class="nav">
+            <nav>
+                <ul class="uly2">
+                    <li class="hov"><a href="">COMING SOON ON SEPT 20TH</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <hr style="border: 2px solid white;">
+    <main>
+        <h1 class="demo">Merch Countdown</h1>
+        <p id="demo"></p>
+    </main>
+
+    <script>
+        // Set the date we're counting down to
+        var countDownDate = new Date("Sept 20, 2024 15:37:25").getTime();
+        
+        // Update the count down every 1 second
+        var x = setInterval(function() {
+        
+          // Get today's date and time
+          var now = new Date().getTime();
+            
+          // Find the distance between now and the count down date
+          var distance = countDownDate - now;
+            
+          // Time calculations for days, hours, minutes and seconds
+          var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+          var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+          var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+          var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            
+          // Output the result in an element with id="demo"
+          document.getElementById("demo").innerHTML = days + "d  " + hours + "h  "
+          + minutes + "m  " + seconds + "s  ";
+            
+          // If the count down is over, write some text 
+          if (distance < 0) {
+            clearInterval(x);
+            document.getElementById("demo").innerHTML = "EXPIRED";
+          }
+        }, 1000);
+        </script>
+</body>
+</html>
